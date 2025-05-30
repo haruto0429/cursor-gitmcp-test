@@ -1,0 +1,181 @@
+/* 基本的なリセットと全体設定 */
+body, h1, h2, p, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* フォントは後ほど調整 */
+}
+
+body {
+    background-color: #f0f0f0; /* 背景色 */
+    color: #333; /* 基本の文字色 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #3498db; /* ヘッダー背景色 */
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    width: 100%;
+}
+
+main {
+    width: 90%;
+    max-width: 600px; /* コンテンツの最大幅 */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+/* 画面の表示/非表示制御 */
+.screen {
+    display: none; /* 通常は非表示 */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.screen.active {
+    display: flex; /* activeクラスが付いた画面のみ表示 */
+}
+
+/* ボタンの基本スタイル */
+button {
+    background-color: #3498db; /* ボタン背景色 */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #2980b9; /* ホバー時のボタン背景色 */
+}
+
+/* スタート画面特有のスタイル */
+#start-screen h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #555;
+}
+
+/* クイズ画面の要素スタイル */
+#question-area {
+    margin-bottom: 20px;
+}
+
+#question-number {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+#question-text {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+#question-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#choices-area button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #ecf0f1; /* 選択肢ボタンの背景色 */
+    color: #333; /* 選択肢ボタンの文字色 */
+    border: 1px solid #bdc3c7;
+}
+
+#choices-area button:hover {
+    background-color: #d5d9dc;
+}
+
+#choices-area button.correct {
+    background-color: #2ecc71; /* 正解選択肢の背景色 */
+    color: white;
+    border-color: #27ae60;
+}
+
+#choices-area button.incorrect {
+    background-color: #e74c3c; /* 不正解選択肢の背景色 */
+    color: white;
+    border-color: #c0392b;
+}
+
+/* フィードバックエリアのスタイル */
+#feedback-area {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#feedback-area.correct {
+    background-color: #e8f5e9; /* 正解フィードバック背景 */
+    border: 1px solid #a5d6a7;
+}
+#feedback-area.incorrect {
+    background-color: #ffebee; /* 不正解フィードバック背景 */
+    border: 1px solid #ef9a9a;
+}
+
+#feedback-text {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#feedback-text.correct {
+    color: #2e7d32; /* 正解テキスト色 */
+}
+#feedback-text.incorrect {
+    color: #c62828; /* 不正解テキスト色 */
+}
+
+#explanation-text {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+/* 結果画面特有のスタイル */
+#result-screen h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #3498db;
+}
+
+#score-text {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+#result-message {
+    font-size: 1.1em;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #2c3e50; /* フッター背景色 */
+    color: #ecf0f1; /* フッター文字色 */
+    width: 100%;
+    margin-top: auto; /* ページ下部に固定 */
+}
