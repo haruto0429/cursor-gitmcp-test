@@ -21,7 +21,6 @@
 -   **表示内容**:
     -   現在の問題番号 (例: 第1問)
     -   問題文
-    -   問題に関連する画像 (存在する場合のみ)
     -   選択肢ボタン (複数)
     -   フィードバックエリア (回答後に表示)
         -   正誤結果テキスト (例: 「正解！」「残念！不正解...」)
@@ -61,7 +60,6 @@
 -   `js/app.js`: アプリケーション全体の制御、画面遷移
 -   `js/quiz.js`: クイズのロジック（問題表示、正誤判定、スコア計算など）
 -   `js/data/quiz_data.js`: クイズの問題、選択肢、正解、解説データ
--   `images/`: クイズ問題に関連する画像ファイル (例: `koban_cat.png`, `munchkin_cat.png`)
 
 ## 4. データ構造 (quiz_data.js)
 
@@ -71,7 +69,7 @@
 const quizData = [
     {
         question: "問題文 (String)",
-        image: "画像ファイルのパス (String, 任意)",
+        image: null, // 画像は現在使用しない (null固定)
         choices: ["選択肢1 (String)", "選択肢2 (String)", ...],
         correctAnswerIndex: 正解の選択肢のインデックス (Number, 0から始まる),
         explanation: "正解の解説文 (String)"
